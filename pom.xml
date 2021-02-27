@@ -49,11 +49,24 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <datatables.datetime.version>1.0.1</datatables.datetime.version>
     </properties>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.jamesward</groupId>
+                <artifactId>unsnapshot-maven-plugin</artifactId>
+                <version>0.2</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>unsnapshot</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>wagon-maven-plugin</artifactId>
@@ -65,9 +78,9 @@
                             <goal>download</goal>
                         </goals>
                         <configuration>
-                            <url>https://cdn.jsdelivr.net/gh/DataTables/DateTime@${datatables.datetime.version}/dist</url>
+                            <url>https://cdn.jsdelivr.net/gh/DataTables/DateTime@${version.unsnapshot}/dist</url>
                             <includes>dateTime.css,dateTime.js</includes>
-                            <toDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${datatables.responsive.version}</toDir>
+                            <toDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${version.unsnapshot}</toDir>
                         </configuration>
                     </execution>
                 </executions>
