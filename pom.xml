@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>datatables-datetime</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>datatables-datetime</name>
     <description>WebJar for datatables-datetime</description>
     <url>https://webjars.org</url>
@@ -36,7 +36,7 @@
         <url>https://github.com/webjars/datatables-datetime</url>
         <connection>scm:git:https://github.com/webjars/datatables-datetime.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/datatables-datetime.git</developerConnection>
-        <tag>datatables-datetime-1.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <dependencies>
